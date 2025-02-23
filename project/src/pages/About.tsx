@@ -129,22 +129,22 @@ function About() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             {[
               {
-                name: "Rajesh Patel",
+                name: "Swayam Anand",
                 role: "Founder & CEO",
-                image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80",
-                bio: "Former national athlete with 15 years of sports management experience"
+                image: "https://www.google.com/imgres?q=blank%20photo&imgurl=https%3A%2F%2Fwww.shutterstock.com%2Fimage-vector%2Fvector-flat-illustration-grayscale-avatar-600nw-2264922221.jpg&imgrefurl=https%3A%2F%2Fwww.shutterstock.com%2Fsearch%2Fblank-user&docid=xfY1niZaC0vceM&tbnid=Bs0EMv6T2j0nUM&vet=12ahUKEwjhya6At9mLAxUy4jgGHcFSOjcQM3oECDYQAA..i&w=600&h=600&hcb=2&ved=2ahUKEwjhya6At9mLAxUy4jgGHcFSOjcQM3oECDYQAA",
+                bio: "First Year student at Guru Teg Bahadur Institue of Technology"
               },
               {
-                name: "Priya Sharma",
+                name: "Shubham Chauhan",
                 role: "Head of Athlete Development",
-                image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80",
-                bio: "Olympic medalist dedicated to nurturing young talent"
+                image: "https://www.google.com/imgres?q=blank%20photo&imgurl=https%3A%2F%2Fwww.shutterstock.com%2Fimage-vector%2Fvector-flat-illustration-grayscale-avatar-600nw-2264922221.jpg&imgrefurl=https%3A%2F%2Fwww.shutterstock.com%2Fsearch%2Fblank-user&docid=xfY1niZaC0vceM&tbnid=Bs0EMv6T2j0nUM&vet=12ahUKEwjhya6At9mLAxUy4jgGHcFSOjcQM3oECDYQAA..i&w=600&h=600&hcb=2&ved=2ahUKEwjhya6At9mLAxUy4jgGHcFSOjcQM3oECDYQAA",
+                bio: "Second Year student at Bhartiya Vidyapeeth Institute of Technology"
               },
               {
-                name: "Amit Kumar",
+                name: "Dhruv Sabharwal",
                 role: "Director of Operations",
-                image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80",
-                bio: "Sports industry veteran with expertise in program management"
+                image: "https://www.google.com/imgres?q=blank%20photo&imgurl=https%3A%2F%2Fwww.shutterstock.com%2Fimage-vector%2Fvector-flat-illustration-grayscale-avatar-600nw-2264922221.jpg&imgrefurl=https%3A%2F%2Fwww.shutterstock.com%2Fsearch%2Fblank-user&docid=xfY1niZaC0vceM&tbnid=Bs0EMv6T2j0nUM&vet=12ahUKEwjhya6At9mLAxUy4jgGHcFSOjcQM3oECDYQAA..i&w=600&h=600&hcb=2&ved=2ahUKEwjhya6At9mLAxUy4jgGHcFSOjcQM3oECDYQAA",
+                bio: "Second year student at Guru Teg Bahadur Institue of Technology 4th Centuanary"
               }
             ].map((member, index) => (
               <div key={index} className="glass-card p-6 rounded-xl text-center animate-scaleIn" style={{ animationDelay: `${index * 200}ms` }}>
