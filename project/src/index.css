@@ -1,0 +1,222 @@
+@import '@fontsource/inter/300.css';
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/500.css';
+@import '@fontsource/inter/600.css';
+@import '@fontsource/inter/700.css';
+@import '@fontsource/inter/800.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gradient-to-b from-gray-950 to-black text-white font-inter;
+  }
+
+  h1 {
+    @apply tracking-tight;
+  }
+
+  h2, h3, h4, h5, h6 {
+    @apply tracking-tight;
+  }
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.hero-gradient {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8));
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.animate-scaleIn {
+  animation: scaleIn 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.animate-slideInRight {
+  animation: slideInRight 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse 3s ease-in-out infinite;
+}
+
+.animate-delay-1 {
+  animation-delay: 0.2s;
+}
+
+.animate-delay-2 {
+  animation-delay: 0.4s;
+}
+
+.animate-delay-3 {
+  animation-delay: 0.6s;
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #A78BFA, #7C3AED, #6D28D9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-size: 200% 200%;
+  animation: gradient 8s ease infinite;
+}
+
+.text-gradient-purple {
+  background: linear-gradient(135deg, #A78BFA, #7C3AED, #6D28D9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-size: 200% 200%;
+  animation: gradient 8s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.nav-link-premium {
+  @apply relative text-gray-300 transition-all duration-300;
+}
+
+.nav-link-premium::after {
+  content: '';
+  @apply absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-500 to-purple-400 transition-all duration-300 rounded-full opacity-0;
+}
+
+.nav-link-premium:hover::after {
+  @apply w-full opacity-100;
+}
+
+.button-primary {
+  @apply bg-gradient-to-r from-purple-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold 
+         transition-all duration-300 transform hover:scale-105 hover:shadow-[0_20px_40px_rgba(124,58,237,0.2)]
+         flex items-center gap-2 relative overflow-hidden;
+}
+
+.button-primary::before {
+  content: '';
+  @apply absolute inset-0 bg-gradient-to-r from-purple-400 to-purple-500 opacity-0 transition-opacity duration-300;
+}
+
+.button-primary:hover::before {
+  @apply opacity-100;
+}
+
+.button-secondary {
+  @apply border border-white/20 text-white px-8 py-4 rounded-lg font-semibold 
+         transition-all duration-300 transform hover:scale-105 hover:border-white/40
+         hover:bg-white/5 relative overflow-hidden;
+}
+
+.input-field {
+  @apply w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg 
+         focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:border-purple-500
+         transition-all duration-300 placeholder-white/40;
+}
+
+.card-hover-effect {
+  @apply transition-all duration-300 hover:scale-105 hover:shadow-[0_20px_40px_rgba(0,0,0,0.3)];
+}
+
+.image-hover-zoom {
+  @apply transition-transform duration-700 hover:scale-110;
+}
+
+.section-padding {
+  @apply py-32;
+}
+
+.container-padding {
+  @apply px-6;
+}
+
+.text-shadow {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.gradient-border {
+  position: relative;
+  border: 1px solid transparent;
+  background: linear-gradient(rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.03)) padding-box,
+              linear-gradient(135deg, rgba(124, 58, 237, 0.5), rgba(139, 92, 246, 0.5)) border-box;
+  border-radius: 0.5rem;
+}
